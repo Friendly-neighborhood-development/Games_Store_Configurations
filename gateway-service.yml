@@ -17,20 +17,12 @@ zuul:
     socket-timeout-millis: 20000
 
   routes:
-    electricians-service:
-      path: /electricians/**
-      serviceId: electricians-service
+    games-service:
+      path: /games/**
+      serviceId: games-service
       stripPrefix: false
 
-    users-service:
-      path: /users/**
-      serviceId: users-service
-      stripPrefix: false
 
-    malfunctions-service:
-      path: /malfunctions/**
-      serviceId: malfunctions-service
-      stripPrefix: false
 
 server:
   port: 8989
