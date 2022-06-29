@@ -1,7 +1,4 @@
 spring:
-  config:
-    activate:
-      on-profile: "prod"
   jpa:
     database: POSTGRESQL
     properties.hibernate.temp.use_jdbc_metadata_defaults: false
@@ -14,33 +11,9 @@ spring:
     username: postgres
     password: root
     driver-class-name: org.postgresql.Driver
-
+    activate:
+      on-profile: "prod"
 server:
   servlet:
     context-path: /games
   port: 8081
-  
-  ---
-  
-spring:
-    config:
-    activate:
-      on-profile: "test"
-  jpa:
-    database: POSTGRESQL
-    properties.hibernate.temp.use_jdbc_metadata_defaults: false
-    hibernate:
-      ddl-auto: create
-    properties:
-  datasource:
-    platform: postgres
-    url: jdbc:postgresql://localhost:5432/games_service_database
-    username: postgres
-    password: root
-    driver-class-name: org.postgresql.Driver
-
-server:
-  servlet:
-    context-path: /games
-  port: 8080
-  
