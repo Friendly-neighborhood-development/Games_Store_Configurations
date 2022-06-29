@@ -12,31 +12,30 @@ spring:
     password: root
     driver-class-name: org.postgresql.Driver
     activate:
-      on-profile: "prod"
-server:
-  servlet:
-    context-path: /games
-  port: 5
-  
-  
----
-
-spring:
-  jpa:
-    database: POSTGRESQL
-    properties.hibernate.temp.use_jdbc_metadata_defaults: false
-    hibernate:
-      ddl-auto: create
-    properties:
-  datasource:
-    platform: postgres
-    url: jdbc:postgresql://localhost:5432/games_service_database
-    username: postgres
-    password: root
-    driver-class-name: org.postgresql.Driver
-    activate:
       on-profile: "dev"
 server:
   servlet:
     context-path: /games
   port: 8081
+  
+  
+---
+
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  datasource:
+    url: jdbc:h2:file:~/test
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+
+
+    activate:
+      on-profile: "test"
+server:
+  servlet:
+    context-path: /games
+  port: 8080
