@@ -16,4 +16,4 @@ spring:
 server:
   servlet:
     context-path: /games
-  port: 8081
+  port: 8098
