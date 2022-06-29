@@ -18,24 +18,23 @@ server:
     context-path: /games
   port: 8081
   
-  
 ---
-
 spring:
-  h2:
-    console:
-      enabled: true
-      path: /h2
+  jpa:
+    database: POSTGRESQL
+    properties.hibernate.temp.use_jdbc_metadata_defaults: false
+    hibernate:
+      ddl-auto: create
+    properties:
   datasource:
-    url: jdbc:h2:file:~/test
-    username: sa
-    password:
-    driverClassName: org.h2.Driver
-
-
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/test_database
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
     activate:
       on-profile: "test"
 server:
   servlet:
     context-path: /games
-  port: 8080
+  port: 8081
