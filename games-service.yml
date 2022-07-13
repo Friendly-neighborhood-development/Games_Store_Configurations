@@ -17,24 +17,4 @@ server:
   servlet:
     context-path: /games
   port: 8081
-  
----
-spring:
-  jpa:
-    database: POSTGRESQL
-    properties.hibernate.temp.use_jdbc_metadata_defaults: false
-    hibernate:
-      ddl-auto: create
-    properties:
-  datasource:
-    platform: postgres
-    url: jdbc:postgresql://localhost:5432/test_database
-    username: postgres
-    password: root
-    driver-class-name: org.postgresql.Driver
-    activate:
-      on-profile: "test"
-server:
-  servlet:
-    context-path: /games
-  port: 8081
+

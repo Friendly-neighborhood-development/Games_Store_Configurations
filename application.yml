@@ -17,9 +17,3 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka/
 
-server:
-<<<<<<< HEAD
-  port: 8001
-=======
-  port: 8010
->>>>>>> main
