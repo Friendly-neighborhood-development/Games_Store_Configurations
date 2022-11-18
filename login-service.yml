@@ -17,6 +17,8 @@ spring:
     activate:
       on-profile: "dev"
 server:
+  servlet:
+    context-path: /login
   port: 8082
 
 
