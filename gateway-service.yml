@@ -1,7 +1,34 @@
 spring:
-    cloud:
-        gateway:
-            discovery:
-                locator:
-                    enabled: 'true'
-                    lower-case-service-id: 'true'
+  cloud:
+    config:
+      enabled: false
+    gateway:
+      routes:
+        - id: games_service
+          uri: lb://games-service
+          predicates:
+            - Path=/games/getAll
+        - id: games_service
+          uri: lb://games-service
+          predicates:
+            - Path=/games/get/**
+        - id: cart_service
+          uri: lb://cart-service
+          predicates:
+            - Path=/cart/v1/update
+        - id: cart_service
+          uri: lb://cart-service
+          predicates:
+            - Path=/cart/v1/getContent
+        - id: cart_service
+          uri: lb://cart-service
+          predicates:
+            - Path=/cart/v1/orders
+        - id: login_service
+          uri: lb://login-service
+          predicates:
+            - Path=/login/v1/authorization
+        - id: login_service
+          uri: lb://login-service
+          predicates:
+            - Path=/login/v1/validate
