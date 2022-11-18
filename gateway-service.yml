@@ -19,7 +19,7 @@ spring:
         - id: cart_service
           uri: lb://cart-service
           predicates:
-            - Path=/cart/v1/getContent
+            - Path=/cart/v1/content
         - id: cart_service
           uri: lb://cart-service
           predicates:
