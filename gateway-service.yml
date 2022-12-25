@@ -1,8 +1,15 @@
 spring:
   cloud:
     config:
-      enabled: false
+      enabled: true
     gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+            - GET
+            - POST
       routes:
         - id: games_service
           uri: lb://games-service
