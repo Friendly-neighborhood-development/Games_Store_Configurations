@@ -3,13 +3,9 @@ spring:
     config:
       enabled: true
     gateway:
-      globalcors:
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: "localhost:8080"
-            allowedMethods:
-            - GET
-            - POST
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+        - AddResponseHeader=Access-Control-Allow-Origin, *
       routes:
         - id: games_service
           uri: lb://games-service
