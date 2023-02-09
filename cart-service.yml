@@ -7,3 +7,4 @@ variables:
   redis:
     host: localhost
     port: 6379
+  kafka: 9092  
