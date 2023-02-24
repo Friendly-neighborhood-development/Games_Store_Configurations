@@ -51,4 +51,16 @@ spring:
           uri: http://localhost:8082/login
           predicates:
             - Path=/login/v1/registration  
+        
+        
+        
+        - id: orders_service
+          uri: http://localhost:8084/orders
+          predicates:
+            - Path=/orders/v1/purchases/**    
+            
+            
+            
+            
+         
 
