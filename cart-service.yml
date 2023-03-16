@@ -5,7 +5,7 @@ server:
 
 variables:
   redis:
-    host: localhost
+    host: redis-db
     port: 6379
   kafka:
     bootstrapAddress: "localhost:9092"
