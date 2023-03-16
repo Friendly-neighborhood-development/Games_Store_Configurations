@@ -10,7 +10,7 @@ spring:
     properties:
   datasource:
     platform: postgres
-    url: jdbc:postgresql://login-service-db:5432/${POSTGRES_LOGIN_SERVICE_DB}
+    url: jdbc:postgresql://login-service-db:5432/${POSTGRES_DB}
     username: postgres
     password: root
     driver-class-name: org.postgresql.Driver
