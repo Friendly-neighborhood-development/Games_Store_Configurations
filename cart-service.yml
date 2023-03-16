@@ -8,4 +8,4 @@ variables:
     host: redis-db
     port: 6379
   kafka:
-    bootstrapAddress: "localhost:9092"
+    bootstrap-servers: kafka:9092
