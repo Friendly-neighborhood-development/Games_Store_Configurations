@@ -1,3 +1,7 @@
+spring:
+  kafka:
+    bootstrap-servers: kafka:9092
+
 server:
   servlet:
     context-path: /cart
@@ -7,5 +11,4 @@ variables:
   redis:
     host: redis-db
     port: 6379
-  kafka:
-    bootstrap-servers: kafka:9092
+
