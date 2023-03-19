@@ -21,11 +21,11 @@ spring:
           allowed-headers: "*"
           allow-credentials: true
     routes:
-      - id: games-service
+      - id: games_service
         uri: lb://games-service:8081/games
         predicates:
           - Path=/games/v1/catalogue/list/**"
-      - id: games-service
+      - id: games_service
         uri: lb://games-service:8081/games
         predicates:
           - Path=/games/v1/catalogue/**
