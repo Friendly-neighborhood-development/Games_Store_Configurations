@@ -21,7 +21,9 @@ server:
     context-path: /orders
   port: 8084
 
-
+variables:
+  kafka:
+    bootstrap_address: kafka:9092
 
 #spring:
 #  jpa:
