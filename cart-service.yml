@@ -1,6 +1,3 @@
-spring:
-  kafka:
-    bootstrap-servers: fnd_games_store-kafka-1:9092
 server:
   servlet:
     context-path: /cart
@@ -10,4 +7,6 @@ variables:
   redis:
     host: redis-db
     port: 6379
+  kafka:
+    bootstrap_address: kafka:9092
 
