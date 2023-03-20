@@ -1,6 +1,6 @@
 spring:
   kafka:
-    bootstrap-servers: kafka:9092
+    bootstrap-servers: fnd_games_store-kafka-1:9092
 server:
   servlet:
     context-path: /cart
